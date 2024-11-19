@@ -18,9 +18,15 @@
             <button type="button" id="top" onclick="display.value = '' ">
               AC
             </button>
-            <button type="button" id="top">&larr;</button>
+            <button
+              type="button"
+              id="top"
+              onclick="display.value = display.value.toString().slice(0, -1)"
+            >
+              &larr;
+            </button>
             <button type="button" id="top">%</button>
-            <button type="button" id="sym" onclick="display.value += '÷' ">
+            <button type="button" id="sym" onclick="display.value += '/' ">
               &#247;
             </button>
           </div>
@@ -28,7 +34,7 @@
             <button type="button" onclick="display.value += '7' ">7</button>
             <button type="button" onclick="display.value += '8' ">8</button>
             <button type="button" onclick="display.value += '9' ">9</button>
-            <button type="button" id="sym" onclick="display.value += 'x' ">
+            <button type="button" id="sym" onclick="display.value += '*' ">
               x
             </button>
           </div>
@@ -51,7 +57,13 @@
           <div>
             <button type="button" onclick="display.value += '0' ">0</button>
             <button type="button" onclick="display.value += '.' ">.</button>
-            <button type="button" id="sym-equal">=</button>
+            <button
+              type="button"
+              id="sym-equal"
+              onclick="display.value = eval(display.value)"
+            >
+              =
+            </button>
           </div>
         </form>
       </div>
